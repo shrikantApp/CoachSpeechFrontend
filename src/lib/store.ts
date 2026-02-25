@@ -1,12 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './features/authSlice';
 import situationReducer from './features/situationSlice';
+import savedReducer from './features/savedSlice';
+import adminReducer from './features/adminSlice';
 
 export const makeStore = () => {
     return configureStore({
         reducer: {
             auth: authReducer,
             situation: situationReducer,
+            saved: savedReducer,
+            admin: adminReducer,
         },
     });
 };
