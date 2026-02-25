@@ -27,8 +27,8 @@ const BEHAVIOR_COLORS: Record<string, string> = {
 export default function SavedPage() {
     const router = useRouter();
     const dispatch = useDispatch<AppDispatch>();
-    const { user, token } = useSelector((state: RootState) => state.auth);
-    const { savedItems } = useSelector((state: RootState) => state.saved);
+    const { user, token } = useSelector((state: RootState) => state?.auth);
+    const { savedItems } = useSelector((state: RootState) => state?.saved);
     const { toasts, addToast, removeToast } = useToast();
     const [selected, setSelected] = useState<any>(null);
     const [copied, setCopied] = useState(false);
